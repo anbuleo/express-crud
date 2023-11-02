@@ -1,10 +1,12 @@
 import  express  from 'express'
 import couponRouter from './src/routes/Coupons.js'
+import userRouter from './src/routes/User.js'
 
 
  const app = express()
  app.use(express.json())
  app.use('/',couponRouter) // utilisation of imported componets
+ app.use('/',userRouter)
 
 //  let coupons = [
 //     {
