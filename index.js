@@ -1,10 +1,12 @@
 import  express  from 'express'
 import couponRouter from './src/routes/Coupons.js'
 import userRouter from './src/routes/User.js'
+import dotenv from 'dotenv'
 
-
+dotenv.config()
  const app = express()
  app.use(express.json())
+ const PORT = process.env.PORT
  app.use('/',couponRouter) // utilisation of imported componets
  app.use('/',userRouter)
 
@@ -108,4 +110,6 @@ import userRouter from './src/routes/User.js'
 //      }
 //  })
 
- app.listen(8000,()=>console.log("The app is start listen port 8000"))
+ app.listen(PORT,()=>console.log(`The app is start listen port ${PORT}`))
+
+ 

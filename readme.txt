@@ -151,3 +151,21 @@ let coupons = [
 
 
 mvc => model view controller
+
+adding .env to secure our confidential things
+
+npm i dotenv
+
+create the .env file in global
+
+in the .env file no need define variable name for the data
+
+import the file in index.js
+
+command =>  import dotenv from 'dotenv'
+
+//to use that
+
+dotenv.config()
+
+for access env file data command => process.env.filename
